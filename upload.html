@@ -1,20 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockchain</title>
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content=""width=device-widyh
+    <meta name="viewport">
+    <title>Blockchain</title>
+    
+          
 </head>
 <body>
+    <div>
+        <div>
+            <h2>Upload de arquivos para Timestamp </h2>
+            
+            <!-- Seção de Upload de Arquivo -->
+            <div>
+                <label for="file-upload">
+                    <input type="file" id="file-upload">
+                    Escolher arquivo
+                </label>
+                <span id="file-name">Nenhum arquivo escolhido</span>
+            </div>
+            
+            <button>Enviar e Criar Timestamp</button>
     
-    <h1>BlockChain</h1>
-    <h2>Upload de Arquivos</h2>
-    <title>elemento HTML Button</title>
-    <input type="text">
-    <h2>Sucess</h2>
-    <button>Enviar
+            <hr>
     
+            <!-- Seção de Verificação de Timestamp -->
+            <h3>Verificar Timestamp de um Arquivo</h3>
+            <input type="text" placeholder="Digite o nome do arquivo para verificar">
+            <br>
+            <button>Verificar Timestamp</button>
+        </div>
+    
+        <script>
+            const fileInput = document.getElementById('file-upload');
+            const fileNameDisplay = document.getElementById('file-name');
+    
+            // Exibir o nome do arquivo selecionado
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files.length > 0) {
+                    fileNameDisplay.textContent = fileInput.files[0].name;
+                } else {
+                    fileNameDisplay.textContent = 'Nenhum arquivo escolhido';
+                }
+            });
+        </script>
+
+
 </html>
