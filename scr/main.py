@@ -49,11 +49,15 @@ def upload_file():
         
     return render_template('upload.html')
 
-@app.route('/verify/<filename>')
+@app.route('/verify/<filename>')        #retorno a homepage
 def verify_file(filename):
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     verificar_timestamp(file_path)
     return redirect(url_for('upload_file'))
+
+@app.route('/politicas')
+def politicas_blockchain():
+    redirect
 
 if __name__ == '__main__':
     app.run(debug=True)
